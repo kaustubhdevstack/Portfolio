@@ -1,3 +1,4 @@
+'use client'
 // Import statements
 import React, { useRef, FormEvent } from 'react';
 import { sendEmail } from '@/actions/sendEmail';
