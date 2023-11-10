@@ -4,7 +4,7 @@ import { devSocial } from '../lib/data'
 export default function Social() {
   return (
 
-        <section className="mb-5 max-w-[53rem] scroll-mt-10 text-center sm:mb-20">
+        <section className="mb-5 mt-5 max-w-[53rem] scroll-mt-10 text-center sm:mb-20">
                 <h2 className="text-3xl font-medium capitalize mb-1 text-center">Developer Socials</h2>
                 <p className="text-center 2x text-gray-800 mb-8">You can find me on following handles on the internet</p>
 
