@@ -6,7 +6,13 @@ import ContactTemplate from "@/app/email/ContactTemplate";
 
 const resend = new Resend(process.env.API_KEY);
 
-export const sendEmail = async (formData: FormData) => {
+interface EmailResponse {
+    data?: any;
+    success?: string;
+    error?: string;
+}
+
+export const sendEmail = async (formData: FormData): Promise<EmailResponse> => {
     const senderEmail = formData.get('senderEmail');
     const message = formData.get('message');
 
