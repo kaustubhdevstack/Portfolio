@@ -12,9 +12,13 @@ export default function Contact() {
     try {
       const response = await sendEmail(formData);
 
-      // Check if the response has the expected structure
-      if (!response || !response.data) {
-        throw new Error("Invalid response structure");
+      // Log the entire response for debugging purposes
+      console.log('Response:', response);
+
+      // Check if the response is undefined or does not have a data property
+      if (!response || typeof response.data === 'undefined') {
+        console.error('Invalid response structure:', response);
+        throw new Error('Invalid response structure');
       }
 
       // Destructure the data from the response
@@ -26,11 +30,11 @@ export default function Contact() {
         return;
       }
 
-      toast.success("Email sent successfully!");
+      toast.success('Email sent successfully!');
       ref.current?.reset();
     } catch (error) {
-      console.error("Error sending email:", error);
-      toast.error("Failed to send email. Please try again.");
+      console.error('Error sending email:', error);
+      toast.error('Failed to send email. Please try again.');
     }
   };
 
