@@ -1,4 +1,4 @@
-My Portfolio - [https://kaustubhdev.netlify.app](https://kaustubhdev.vercel.app/)
+My Portfolio - [https://kaustubhdev.vercel.app](https://kaustubhdev.vercel.app/)
 
 Technology used:
 
